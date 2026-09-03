@@ -18,10 +18,13 @@ h6 {
 }
 #primary-list {
     list-style: none;
-    text-align: center;
 }
 img {
     display: block;
     margin: auto;
     max-width: 150px;
+}
+.products-list{
+    padding-left: 0;
+    text-align: center;
 }
