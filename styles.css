@@ -8,12 +8,20 @@ p::first-letter {
 }
 
 a:hover {
-    text-decoration: none;
-    opacity: 0.5;
+     opacity: 0.5;
+    text-decoration: none;  
+}
+
+img:hover {
+    transform: scale(1.2);
 }
 
 h1,
 h2,
+.products-list figcaption {
+    z-index: 2;
+    position: relative;
+}
 h3,
 h4,
 h5,
@@ -144,5 +152,38 @@ main {
 @media (max-width: 768px) {
     .products-list {
         grid-template-columns: 1fr;
+    }
+}
+#products-title {
+    animation: rotate 3s linear infinite;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotateX(20deg);
+    }
+
+    50% {
+        transform: rotateY(20deg);
+    }
+
+    100% {
+        transform: rotateZ(10deg);
+    }
+}
+.intro {
+    animation: move 3s linear infinite;
+}
+
+@keyframes move {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    50%{
+        transform: translate(20%, 20%);
+    }
+    100%{
+        transform: translate(0, 0);
     }
 }
