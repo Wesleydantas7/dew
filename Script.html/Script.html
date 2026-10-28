@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página</title>
+    <script src="./form.js" defer></script>
+</head>
+
+<body>
+
+    <h1> Calculadora de média Acadêmica </h1>
+
+
+    <form action="" id="formularioAcademico">
+        <h2>Formulário</h2>
+        <div>
+            <label for="nome">Digite seu nome</label>
+
+            <input 
+            type="text" 
+            id="nome" 
+            name="nome" 
+            placeholder="Digite seu nome" 
+            required>
+        </div>
+
+        <div>
+            <label for="notaUm">Digite a primeira nota</label>
+            <input type="number" name="notaUm" id="notaUm" min="10" step="1" placeholder="7.0"  required>
+        </div>
+
+        <div>
+            <label for="notaDois">Digite a segunda nota</label>
+            <input type="number" name="notaDois" id="notaDois" min="10" step="1" placeholder="7.0"  required>
+        </div>
+
+        <div>
+            <button type="submit" id="btnCalcular">Calcular nota</button>
+            <button type="reset" id="btnLimparCampos">Limpar Campo</button>
+        </div>
+        <div>
+            <p id="resultados">...</p>
+        </div>
+       
+
+    </form>
+
+
+
+
+
+
+
+
+</body>
+
+</html>
