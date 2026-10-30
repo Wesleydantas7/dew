@@ -8,13 +8,13 @@ const campoNotaUM = document.querySelector("#notaUm");
 console.log(campoNotaUM);
 
 const campoNotaDois = document.querySelector("#notaDois");
-console.log(campoNotadois);
+console.log(campoNotaDois);
 
 const resultados = document.querySelector("#resultados");
 console.log(resultados);
 
-const botaoCaulcularMedia = document.querySelector("#btnCaulcular");
-console.log(botaoCaulcularMedia); 
+const botaoCaulcularMedia = document.querySelector("#btnCalcular");
+console.log("botaoCalcularMedia", botaoCaulcularMedia); 
 
 let mediaCaulculada = 0;
 
@@ -22,8 +22,8 @@ let aprovado = false;
 
 let mensagemFinal = ("...")
 
-function caulcularMedia() {
-    return(1 + 2)/ 2;
+function caulcularMedia(notaUm, notaDois) {
+    return(notaUm + notaDois)/ 2; 
 }
 
 function verificarAprovacao(mediaCaulculada) {
@@ -33,6 +33,16 @@ function verificarAprovacao(mediaCaulculada) {
     }
     return false;
 }
+
+function mensagemAprovacao(aprovacao) {
+
+    if(aprovado) {
+        return "Aprovado"
+    }
+    return "Reprovado"
+
+} 
+
 
 
 botaoCaulcularMedia.addEventListener("click", function() {
@@ -49,11 +59,11 @@ botaoCaulcularMedia.addEventListener("click", function() {
 
     console.log("mediaCalculada:", mediaCaulculada);
 
-    console.log("aprovacao", aprovacao);
+    console.log("aprovacao", aprovado);
 
-    mensagemFinal = mensagemAprovacao(aprovacao);
+    mensagemFinal = mensagemAprovacao(aprovado);
 
-    console.log("mensagemAprovacao", mensagemAprovacao(aprovacao));
+    console.log("mensagemAprovacao", mensagemAprovacao(aprovado));
 
     resultados.textContent = mensagemFinal
 
